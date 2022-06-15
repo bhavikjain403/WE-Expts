@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Form Validation</title>
+    </head>
+    <body>
+        <form action="">
+            First Name : <br>
+            <input type="text" id="fname"> <br><br>
+            Last Name : <br>
+            <input type="text" id="lname"> <br><br>
+            Email : <br>
+            <input type="text" id="email"> <br><br>
+            Password : <br>
+            <input type="password" id="pass"> <br><br>
+            Confirm Password : <br>
+            <input type="password" id="cpass"> <br><br>
+            <button onclick="return(validate())">Validate</button>
+        </form>
+        <script>
+            function validate(){
+                var email = document.querySelector("#email")
+                var fname = document.querySelector("#fname")
+                var lname = document.querySelector("#lname")
+                var pass = document.querySelector("#pass")
+                var cpass = document.querySelector("#cpass")
+                if(fname.value==''){
+                    alert("Please enter your first name")
+                    fname.focus()
+                    return false
+                }
+                if(lname.value==''){
+                    alert("Please enter your last name")
+                    lname.focus()
+                    return false
+                }
+                if(email.value==''){
+                    alert("Please enter your email")
+                    email.focus()
+                    return false
+                }
+                else{
+                    atpos = email.value.indexOf('@')
+                    dotpos = email.value.lastIndexOf('.')
+                    if(atpos<1 || (dotpos-atpos)<2){
+                        alert("Please provide valid email")
+                        email.focus()
+                        return false
+                    }
+                }
+                if(pass.value.length<6){
+                    alert("Length of password should be greater than 6")
+                    pass.focus()
+                    return false
+                }
+                if(cpass.value != pass.value){
+                    alert("Password and Confirm Password not matching")
+                    return false
+                }
+            }
+        </script>
+    </body>
+</html>

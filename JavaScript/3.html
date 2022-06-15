@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Even/Odd</title>
+    </head>
+    <body>
+        <table border style="border-collapse:collapse;">
+            <tr><td style="padding-right:500px;">Display Even Odd</td></tr>
+            <tr>
+                <td><br>Enter list<input type="text" id="list"><br><br>
+                    Output<input type="text" id="Output"><br><br>
+                    <button onclick="evenno()">Even</button>
+                    <button onclick="oddno()">Odd</button>
+                </td>
+            </tr>
+        </table>
+        <script>
+            function odd(num){
+                if(num%2!=0){
+                    return num
+                }
+            }
+            function even(num){
+                if(num%2==0){
+                    return num
+                }
+            }
+            function oddno(){
+                var a = document.querySelector('#list').value
+                var arr = a.split(" ")
+                Output.value = arr.filter(odd)
+            }
+            function evenno(){
+                var a = document.querySelector('#list').value
+                var arr = a.split(" ")
+                Output.value = arr.filter(even)
+            }
+        </script>
+    </body>
+</html>

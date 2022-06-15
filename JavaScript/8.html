@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Oddish/Evenish</title>
+    </head>
+    <body>
+        <table border style="border-collapse:collapse;">
+            <tr><td style="padding-right:500px;">Oddish/Evenish</td></tr>
+            <tr>
+                <td><br>Enter number<input type="text" id="num"><br><br>
+                    Output<input type="text" id="Output"><br><br>
+                    <button onclick="determine()">Determine</button>
+                </td>
+            </tr>
+        </table>
+        <script>
+            function determine(){
+                var n = document.querySelector('#num').value
+                n = Number(n)
+                var sum=0
+                while(n){
+                    sum+=n%10
+                    n=Math.floor(n/10);
+                }
+                if(sum%2==0)
+                {Output.value = "Evenish"}
+                else
+                {Output.value = "Oddish"}
+            }
+        </script>
+    </body>
+</html>

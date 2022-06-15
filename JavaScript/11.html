@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Dropdown</title>
+    </head>
+    <body>
+        <table border style="border-collapse:collapse;">
+            <tr><td style="padding-right:500px;">Dropdown</td></tr>
+            <tr>
+                <td><br>Select color : <select id="list">
+                    <option>Red</option>
+                    <option>Blue</option>
+                    <option>Green</option>
+                    <option>Yellow</option>
+                </select><br><br>
+                    <button onclick="display()">Display</button>
+                </td>
+            </tr>
+        </table>
+        <script>
+            function display(){
+                var a = document.querySelector('#list')
+                var l = a.length
+                var text = "Number of elements : "+l
+                for(let i=0; i<l; i++){
+                    text = text+"\n"+a.options[i].text
+                }
+                alert(text)
+            }
+        </script>
+    </body>
+</html>

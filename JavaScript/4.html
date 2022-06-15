@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Double</title>
+    </head>
+    <body>
+        <table border style="border-collapse:collapse;">
+            <tr><td style="padding-right:500px;">Display Doubled List</td></tr>
+            <tr>
+                <td><br>Enter list<input type="text" id="list"><br><br>
+                    Output<input type="text" id="Output"><br><br>
+                    <button onclick="doublelist()">Double</button>
+                </td>
+            </tr>
+        </table>
+        <script>
+            function double(num){
+                return num*2
+            }
+            function doublelist(){
+                var a = document.querySelector('#list').value
+                var arr = a.split(" ")
+                Output.value = arr.map(double)
+            }
+        </script>
+    </body>
+</html>

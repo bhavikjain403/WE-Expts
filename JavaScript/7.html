@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Q7</title>
+    </head>
+    <body>
+        <table border style="border-collapse:collapse;">
+            <tr><td style="padding-right:500px;">Question 7</td></tr>
+            <tr>
+                <td><br>Enter number<input type="text" id="num"><br><br>
+                    Enter length<input type="text" id="len"><br><br>
+                    Output<input type="text" id="Output"><br><br>
+                    <button onclick="ans()">Solve</button>
+                </td>
+            </tr>
+        </table>
+        <script>
+            function ans(){
+                var n = document.querySelector('#num').value
+                var l = document.querySelector('#len').value
+                var arr = []
+                for(let i=1; i<=l; i++){
+                    arr[i-1]=n*i
+                }
+                Output.value = arr
+            }
+        </script>
+    </body>
+</html>

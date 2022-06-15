@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>String</title>
+    </head>
+    <body>
+        <table border style="border-collapse:collapse;">
+            <tr><td style="padding-right:500px;">Search and Replace String</td></tr>
+            <tr>
+                <td><br>Input string<input type="text" id="str"><br><br>
+                    Enter string to Search<input type="text" id="sear"><br><br>
+                    Number of occurences<input type="text" id="Output1"><br><br>
+                    Replace string with<input type="text" id="repl"><br><br>
+                    New string<input type="text" id="Output2"><br><br>
+                    <button onclick="search()">Search</button>
+                    <button onclick="replace()">Replace</button>
+                </td>
+            </tr>
+        </table>
+        <script>
+            function search(){
+                var str = document.querySelector("#str").value
+                var sear = document.querySelector("#sear").value
+                var r = new RegExp(sear,'g')
+                Output1.value = str.match(r).length
+            }
+            function replace(){
+                var str = document.querySelector("#str").value
+                var repl = document.querySelector("#repl").value
+                var sear = document.querySelector("#sear").value
+                var r = new RegExp(sear,'g')
+                Output2.value = str.replace(r, repl)
+            }
+        </script>
+    </body>
+</html>

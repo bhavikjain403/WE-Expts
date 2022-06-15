@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Sort</title>
+    </head>
+    <body>
+        <table border style="border-collapse:collapse;">
+            <tr><td style="padding-right:500px;">Display Sorted List</td></tr>
+            <tr>
+                <td><br>Enter list<input type="text" id="list"><br><br>
+                    Output<input type="text" id="Output"><br><br>
+                    <button onclick="sortlist()">Sort</button>
+                </td>
+            </tr>
+        </table>
+        <script>
+            function sortlist(){
+                var a = document.querySelector('#list').value
+                var arr = a.split(" ")
+                var n = arr.length
+                for(let i=0; i<n; i++){ 
+                    for(let j=i+1;j<n;j++){
+                        if(Number(arr[i])>Number(arr[j])){
+                            temp = arr[i]
+                            arr[i]=arr[j]
+                            arr[j]=temp
+                        }
+                    }
+                }
+                Output.value = arr
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Uppercase</title>
+    </head>
+    <body>
+        <table border style="border-collapse:collapse;">
+            <tr><td style="padding-right:500px;">Uppercase</td></tr>
+            <tr>
+                <td><br>Enter string<input type="text" id="str"><br><br>
+                    Output<input type="text" id="Output"><br><br>
+                    <button onclick="determine()">Determine</button>
+                </td>
+            </tr>
+        </table>
+        <script>
+            function determine(){
+                var str = document.querySelector('#str').value
+                if(str[0]==str[0].toUpperCase())
+                {Output.value = "Upper-case"}
+                else
+                {Output.value = "Not Upper-case"}
+            }
+        </script>
+    </body>
+</html>
