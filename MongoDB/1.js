@@ -1,7 +1,6 @@
 var mongoose = require("mongoose")
 var bodyParser = require("body-parser")
 var express = require("express")
-const express = require("express")
 const app = express()
 var parser = bodyParser.urlencoded({extended:true})
 mongoose.connect('mongodb://localhost:27017/lab-db',{
